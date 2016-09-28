@@ -1,4 +1,3 @@
-
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -63,17 +62,6 @@ export JDK_HOME=$(/usr/libexec/java_home)
     # This variable configures git to not require a message when you merge.
     export GIT_MERGE_AUTOEDIT='no'
 
-    # Editors
-    # Tells your shell that when a program requires various editors, use atom.
-    # The -w flag tells your shell to wait until atom exits
-    export VISUAL="atom -w"
-    export SVN_EDITOR="atom -w"
-    export GIT_EDITOR="atom -w"
-    export EDITOR="atom -w"
-
-    # Version
-    # What version of the Flatiron School bash profile this is
-    export FLATIRON_VERSION='1.1.1'
   # Paths
 
     # The USR_PATHS variable will just store all relevant /usr paths for easier usage
@@ -164,6 +152,8 @@ function extract () {
   alias gba="git branch -a"
   alias gcam="git commit -am"
   alias gbb="git branch -b"
+  alias gco="git checkout"
+  alias gcob="git checkout -b"
 
   # Atom
   alias atom='open -a "Atom"'
@@ -172,7 +162,7 @@ function extract () {
   bind "set completion-ignore-case on"
 
 # Postgres
-export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
+# export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
 
 # Final Configurations and Plugins
 # =====================
